@@ -1,0 +1,115 @@
+{
+  "provider": {
+    "prov-anthropic": {
+      "name": "Anthropic Test",
+      "kind": "anthropic",
+      "options": {
+        "apiKey": "sk-test-anthropic-12345678",
+        "baseURL": "https://anthropic.example/v1",
+        "apiKeyRequired": true
+      },
+      "source": "custom",
+      "models": {
+        "claude-test": {
+          "limit": {
+            "context": 200000,
+            "output": 8192
+          },
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          },
+          "reasoning": {
+            "enabled": true,
+            "variants": ["off", "high", "max"],
+            "defaultVariant": "high"
+          }
+        }
+      }
+    },
+    "prov-openai": {
+      "name": "OpenAI Compatible Test",
+      "kind": "openai-compatible",
+      "options": {
+        "apiKey": "sk-test-openai-12345678",
+        "baseURL": "https://openai.example/v1",
+        "apiKeyRequired": true
+      },
+      "source": "custom",
+      "models": {
+        "gpt-test": {
+          "limit": {
+            "context": 128000,
+            "output": 4096
+          },
+          "modalities": {
+            "input": ["text"],
+            "output": ["text"]
+          }
+        },
+        "gpt-alias": {
+          "name": "gpt-wire",
+          "limit": {
+            "context": 64000,
+            "output": 2048
+          },
+          "modalities": {
+            "input": ["text"],
+            "output": ["text"]
+          }
+        }
+      }
+    },
+    "prov-responses": {
+      "name": "Responses Test",
+      "kind": "openai",
+      "options": {
+        "apiKey": "sk-test-responses-12345678",
+        "baseURL": "https://responses.example/v1",
+        "apiKeyRequired": true
+      },
+      "source": "custom",
+      "models": {
+        "resp-test": {
+          "limit": {
+            "context": 100000
+          },
+          "modalities": {
+            "input": ["text", "audio"],
+            "output": ["text"]
+          }
+        }
+      }
+    },
+    "prov-disabled": {
+      "name": "Disabled Test",
+      "kind": "openai-compatible",
+      "enabled": false,
+      "options": {
+        "apiKey": "sk-test-disabled-12345678",
+        "baseURL": "https://disabled.example/v1"
+      },
+      "source": "custom",
+      "models": {
+        "disabled-model": {
+          "limit": { "context": 1000 }
+        }
+      }
+    },
+    "prov-nokey": {
+      "name": "No Key Test",
+      "kind": "openai-compatible",
+      "options": {
+        "apiKey": "",
+        "baseURL": "https://nokey.example/v1",
+        "apiKeyRequired": true
+      },
+      "source": "custom",
+      "models": {
+        "nokey-model": {
+          "limit": { "context": 1000 }
+        }
+      }
+    }
+  }
+}

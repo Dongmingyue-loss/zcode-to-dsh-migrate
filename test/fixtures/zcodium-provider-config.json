@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "config": {
+    "providerOrder": ["new-provider"],
+    "providerConfigRules": {
+      "providerRules": [
+        {
+          "providerId": "new-provider",
+          "providerName": "ZCodium Test",
+          "config": {
+            "group": "standard-personal",
+            "access": {
+              "type": "api-key",
+              "apiKey": "sk-test-zcodium-12345678"
+            },
+            "api": {
+              "type": "openai-chat-completions",
+              "baseUrl": "https://zcodium.example/v1"
+            },
+            "personalModelIds": ["zc-model"],
+            "modelOrder": ["zc-model"]
+          }
+        }
+      ]
+    },
+    "modelConfigRules": {
+      "providerModelRules": [],
+      "manualProviderModelRules": [
+        {
+          "modelId": "zc-model",
+          "providerId": "new-provider",
+          "config": {
+            "enabled": true,
+            "properties": {
+              "contextWindow": 50000,
+              "inputFormat": {
+                "supportsImage": true
+              }
+            },
+            "optionSpecs": {
+              "maxOutputTokens": {
+                "max": 2048
+              },
+              "reasoningLevel": {
+                "values": ["disabled", "enabled"]
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

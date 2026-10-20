@@ -1,0 +1,7 @@
+{
+  "providerIds": [
+    "prov-openai",
+    "prov-anthropic",
+    "prov-responses"
+  ]
+}

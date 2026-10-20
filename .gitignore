@@ -1,0 +1,19 @@
+# Local migration artifacts may contain credential values.
+backups/
+reports/
+MIGRATION-RECORD.md
+
+# Machine-specific launcher.
+zcode2dsh.local.cmd
+
+# Bilibili publishing material is kept local unless explicitly published.
+bilibili/
+
+# Build output and dependencies.
+dist/
+node_modules/
+*.log
+
+# OS files.
+.DS_Store
+Thumbs.db

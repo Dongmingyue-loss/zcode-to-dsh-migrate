@@ -1,0 +1,5 @@
+{
+  "httpProxy": "127.0.0.1:7890",
+  "dataBaseDir": "Z:\\fixture-data",
+  "locale": "zh-CN"
+}

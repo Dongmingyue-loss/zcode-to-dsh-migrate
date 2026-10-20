@@ -1,0 +1,36 @@
+{
+  "name": "zcode-to-dsh-migrate",
+  "version": "1.0.0",
+  "private": false,
+  "description": "Migrate ZCode / ZCodium configuration into DSH Desktop Beta with conflict detection, backups, and a no-secret-leak report.",
+  "license": "MIT",
+  "bin": {
+    "zcode2dsh": "bin/zcode2dsh.js"
+  },
+  "files": [
+    "bin",
+    "lib",
+    "test",
+    "scripts",
+    "README.md",
+    "LICENSE",
+    "zcode2dsh.cmd"
+  ],
+  "scripts": {
+    "test": "node test/run-tests.js",
+    "scan:secrets": "node scripts/secret-scan.js",
+    "package": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/package.ps1"
+  },
+  "keywords": [
+    "zcode",
+    "zcodium",
+    "dsh",
+    "deepseek-harness",
+    "migration",
+    "configuration",
+    "cli"
+  ],
+  "engines": {
+    "node": ">=18"
+  }
+}

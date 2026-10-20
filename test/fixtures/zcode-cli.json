@@ -1,0 +1,23 @@
+{
+  "mcp": {
+    "servers": {
+      "test-http": {
+        "type": "http",
+        "url": "http://127.0.0.1:9999/mcp",
+        "headers": {
+          "Authorization": "Bearer test-token-12345678"
+        },
+        "timeoutMs": 45000
+      },
+      "test-sse": {
+        "type": "sse",
+        "url": "http://127.0.0.1:9998/sse"
+      }
+    }
+  },
+  "skills": {
+    "C:/Users/DELL/.agents/skills/skill-a/SKILL.md": {
+      "enable": false
+    }
+  }
+}

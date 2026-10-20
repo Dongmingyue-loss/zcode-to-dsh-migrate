@@ -1,0 +1,19 @@
+# Existing DSH profile patch.
+- id: llm-pi-ai
+  name: "@deepseek-ai/dsh-llm-pi-ai"
+  config:
+    providers:
+      deepseek:
+        baseURL: https://existing.example/v1
+        models:
+          - id: existing-model
+            name: Existing Model
+            contextWindow: 100000
+            input:
+              - text
+        apiKeyEnv: DEEPSEEK_API_KEY
+- id: agent-default-model
+  name: "@deepseek-ai/dsh-agent-default-model"
+  config:
+    provider: deepseek
+    model: existing-model
